@@ -1,7 +1,7 @@
 const Express = require('express');
 const home = require('./routes/home');
 const articles = require('./routes/articles');
-// const tweet = require('./routes/tweets');
+const tweet = require('./routes/tweets');
 const cors = require("cors");
 
 
@@ -17,7 +17,7 @@ app.listen(port, '192.168.10.14',() => {
 app.use(cors());
 app.use('/api/articles', articles);
 app.use('/api/home', home);
-// app.use('/api/tweet', tweet);
+app.use('/api/tweet', tweet);
 
 
 
